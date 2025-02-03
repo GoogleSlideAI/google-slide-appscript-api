@@ -1,4 +1,8 @@
-import { PROMPT_GENERATE_OUTLINE, PROMPT_GENERATE_SLIDES } from '../constants/prompt.constants';
+import {
+  PROMPT_GENERATE_OUTLINE,
+  PROMPT_GENERATE_SLIDES,
+  PROMPT_SUMMARIZE_PRESENTATION,
+} from '../constants/prompt.constants';
 
 export const generateOutlinePrompt = (
   title: string,
@@ -24,9 +28,20 @@ export const generateOutlinePrompt = (
 export const generatePresentationPrompt = (outline: string) => {
   return {
     prompt: `
-        The outline content of the presentation is: ${outline}
+        The outline content of the presentation is: 
+        ${outline}
         Now your task is deciding which slides styles to use but overall the presentation should be consistent and seamless. Please generate the slides for the presentation from the requirements below.
         ${PROMPT_GENERATE_SLIDES}
+        `,
+  };
+};
+
+export const generateSummarizePresentationPrompt = (content: string) => {
+  return {
+    prompt: `
+        The presentation content is: 
+        ${content}
+        ${PROMPT_SUMMARIZE_PRESENTATION}
         `,
   };
 };

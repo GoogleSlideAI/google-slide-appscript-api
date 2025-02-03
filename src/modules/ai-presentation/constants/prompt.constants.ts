@@ -90,3 +90,9 @@ export const PROMPT_GENERATE_SLIDES = `
     The above JSON contains a list of the 4 slide templates: title, left-image-text, right-image-text and title-sub-text. Use this to create slides. For each slide, pick an appropriate slide template from the 4 templates given in the JSON and generate the response. Be creative and factual with the content. Comply with the user's input. 
     RESPOND WITH JSON ONLY
 `;
+
+export const PROMPT_SUMMARIZE_PRESENTATION = `
+    You are the JarvisSlides tool, based on the presentation, summarize the presentation. Do not include markdown or any other formatting.
+    Slide n Summary:\n
+    [Your summary here]
+`;

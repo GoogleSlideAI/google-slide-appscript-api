@@ -2,6 +2,7 @@ import { Body, Controller, HttpException, HttpStatus, Post } from '@nestjs/commo
 
 import { AiPresentationContentDto } from './dto/ai-presentation-content.dto';
 import { AiPresentationOutlineDto } from './dto/ai-presentation-outline.dto';
+import { AiPresentationSummariesDto } from './dto/ai-presentation-summaries.dto';
 import { AiPresentationService } from './ai-presentation.service';
 
 @Controller('ai-presentation')
@@ -26,5 +27,11 @@ export class AiPresentationController {
     } catch (error) {
       throw new HttpException(error.message, HttpStatus.INTERNAL_SERVER_ERROR);
     }
+  }
+
+  @Post('summarize')
+  async summarizePresentation(@Body() aiPresentationSummariesDto: AiPresentationSummariesDto) {
+    const summary = await this.aiPresentationService.summariesPresentation(aiPresentationSummariesDto.content);
+    return { success: true, summary };
   }
 }
