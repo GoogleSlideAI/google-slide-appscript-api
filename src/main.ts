@@ -70,5 +70,4 @@ async function bootstrap() {
     }
   });
 }
-
 bootstrap().catch((e) => console.log(`\n🚀 Failed to start Application due to ->>\n${e.stack}`));
