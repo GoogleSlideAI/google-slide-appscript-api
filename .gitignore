@@ -137,3 +137,5 @@ mount-data
 service-account.json
 
 .vercel
+
+.github

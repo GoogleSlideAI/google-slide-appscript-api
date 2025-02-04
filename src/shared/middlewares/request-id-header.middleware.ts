@@ -1,7 +1,8 @@
 import { Injectable, Logger, NestMiddleware } from '@nestjs/common';
-import { HeaderKey } from 'src/shared/constants/http-request';
 import { v4 } from 'uuid';
 import { NextFunction, Request, Response } from 'express';
+
+import { HeaderKey } from '../constants/http-request';
 
 @Injectable()
 export class RequestIdHeaderMiddleware implements NestMiddleware {

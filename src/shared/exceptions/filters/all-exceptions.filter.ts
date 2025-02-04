@@ -1,8 +1,8 @@
 import { ArgumentsHost, Catch, ExceptionFilter, HttpException, HttpStatus, Logger } from '@nestjs/common';
-import { HeaderKey } from 'src/shared/constants/http-request';
-import { ClientErrorDetails, ErrorResponseBody } from 'src/shared/dtos/common.dto';
 import { Request, Response } from 'express';
 
+import { HeaderKey } from '../../constants/http-request';
+import { ClientErrorDetails, ErrorResponseBody } from '../../dtos/common.dto';
 import { CustomBadRequestException } from '../custom-bad-request.exception';
 import { CustomUnprocessableEntityException } from '../custom-unprocessable-entity.exception';
 

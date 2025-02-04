@@ -1,9 +1,10 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { AsyncLocalStorage } from 'async_hooks';
-import { HeaderKey } from 'src/shared/constants/http-request';
-import { CurrentUserDto } from 'src/shared/dtos/current-user.dto';
-import { CustomBadRequestException } from 'src/shared/exceptions/custom-bad-request.exception';
 import { NextFunction, Request, Response } from 'express';
+
+import { HeaderKey } from '../../constants/http-request';
+import { CurrentUserDto } from '../../dtos/current-user.dto';
+import { CustomBadRequestException } from '../../exceptions/custom-bad-request.exception';
 
 export class HttpRequestContext {
   constructor(

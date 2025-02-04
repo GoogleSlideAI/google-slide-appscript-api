@@ -1,6 +1,7 @@
 import { Injectable, Logger, NestMiddleware } from '@nestjs/common';
-import { HttpRequestContextService } from 'src/shared/modules/http-request-context/http-request-context.service';
 import { NextFunction, Request, Response } from 'express';
+
+import { HttpRequestContextService } from '../../modules/http-request-context/http-request-context.service';
 
 @Injectable()
 export class HttpRequestContextMiddleware implements NestMiddleware {

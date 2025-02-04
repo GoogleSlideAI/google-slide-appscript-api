@@ -1,8 +1,8 @@
 import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
 import { Type } from 'class-transformer';
 import { IsNotEmpty, IsOptional, IsString } from 'class-validator';
-import { PaginationOrderOption } from 'src/lib/interfaces/pagination-options.interface';
 
+import { PaginationOrderOption } from '../../lib/interfaces/pagination-options.interface';
 import { ClientErrorIssueId } from '../constants/client-error-issue-id';
 import { IsIntegerQueryParam, IsOrderQueryParam } from '../decorators/query-params.decorator';
 
