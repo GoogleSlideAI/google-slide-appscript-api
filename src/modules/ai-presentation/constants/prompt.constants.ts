@@ -92,7 +92,31 @@ export const PROMPT_GENERATE_SLIDES = `
 `;
 
 export const PROMPT_SUMMARIZE_PRESENTATION = `
-    You are the JarvisSlides tool, based on the presentation, summarize the presentation. Do not include markdown or any other formatting.
-    Slide n Summary:\n
-    [Your summary here]
+    You are the JarvisSlides tool. Generate a visually appealing markdown summary of the presentation using the following format:
+
+    #**Presentation Summary**
+
+    ##**Key Points**
+    {Generate 3-4 key takeaways from the entire presentation using bullet points}
+
+    ##**Slide-by-Slide Overview**
+
+    ### 🎬 **Slide {n} - {slide_title}**
+    >**Main Message**: {core message}
+    - {key point 1}
+    - {key point 2}
+
+    ---
+
+    Use the following markdown elements:
+    - Headers with bold text (#, ##, ### with **text**)
+    - Bold text for emphasis (**text**)
+    - Blockquotes (>)
+    - Bullet points (-)
+    - Emojis for visual appeal
+    - Horizontal rules (---)
+
+    Make sure to maintain consistent formatting throughout the summary and use appropriate emojis to enhance readability.
+    All section titles and slide titles should be bold.
+    RESPOND WITH MARKDOWN FORMAT ONLY.
 `;
