@@ -22,7 +22,7 @@ Notes:
 - Use the user's input to determine how many slides to generate (if fewer or more ideas are needed, adapt accordingly, but always produce at least one slide).
 - Each "title" should be a concise label for the slide topic.
 - Each "mediumDescription" should provide a brief explanation or key phrase that supports the title.
-- Respond in valid JSON format only.
+- Respond in valid JSON format only but do not include json in the response.
 `;
 
 export const PROMPT_GENERATE_SLIDES = `
@@ -88,7 +88,7 @@ export const PROMPT_GENERATE_SLIDES = `
     ]
     }
     The above JSON contains a list of the 4 slide templates: title, left-image-text, right-image-text and title-sub-text. Use this to create slides. For each slide, pick an appropriate slide template from the 4 templates given in the JSON and generate the response. Be creative and factual with the content. Comply with the user's input. 
-    RESPOND WITH JSON ONLY
+    RESPOND WITH JSON FORMAT ONLY but do not include json in the response.
 `;
 
 export const PROMPT_SUMMARIZE_PRESENTATION = `
